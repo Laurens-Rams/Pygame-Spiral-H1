@@ -30,15 +30,11 @@ while running:
     pygame.draw.circle(screen, white, (x, y), 15)
     pygame.draw.line(screen, white, (center_x, center_y), (x, y))
 
-    # Check for boundary and reverse direction if needed
     if radius > screen.get_height() // 2 or radius < 0:
         radius_increase = -radius_increase
 
-    # Update the angle and radius
     angle += speed
     radius += radius_increase
-
-    # Update the display
     pygame.display.flip()
     pygame.time.delay(10)
 
